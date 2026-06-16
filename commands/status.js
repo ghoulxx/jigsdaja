@@ -37,7 +37,7 @@ function buildOnlineEmbed(info, host, client) {
     .setColor(0x2ecc71) // Green
     .addFields(
       { name: '🟢 Status', value: 'Online', inline: true },
-      { name: '🌐 Server IP', value: `${host}:${config.server.port}`, inline: true },
+      { name: '🌐 Server IP', value: `${host}:${(config.server && config.server.port) || '25565'}`, inline: true },
       { name: '📦 Version', value: `${info.version}`, inline: true },
       { name: '👥 Players', value: playersText, inline: true },
       { name: '📡 Ping', value: `${Math.round(info.ping)}ms`, inline: true },
@@ -85,7 +85,7 @@ function buildOfflineEmbed(host, reason = 'Connection Failed') {
     .setColor(0xe74c3c) // Red
     .addFields(
       { name: '🔴 Status', value: 'Offline', inline: true },
-      { name: '🌐 Server IP', value: `${host}:${config.server.port}`, inline: true },
+      { name: '🌐 Server IP', value: `${host}:${(config.server && config.server.port) || '25565'}`, inline: true },
       { name: '❌ Connection Failed', value: `${reason}` }
     )
     .setTimestamp()
