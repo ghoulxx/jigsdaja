@@ -1,0 +1,15 @@
+{
+  "name": "minecraft-status-bot",
+  "version": "1.0.0",
+  "description": "Discord.js v14 bot to check a Minecraft server status",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.11.0",
+    "minecraft-server-util": "^5.2.1"
+  }
+}
